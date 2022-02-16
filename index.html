@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Saving</title>
+    <!-- css style -->
+    <link rel="stylesheet" href="CSS2/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/e14277a0df.js" crossorigin="anonymous"></script>
+    <!--  -->
+
+</head>
+
+<body>
+    <header>
+        <h1 class="heading text-center mb-3 p-5">Money Savings <i class="fa-solid fa-square-dollar"></i></h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-sm-4">
+                    <img src="images/image1.png" alt="" style="height: 800px;width: 700px;">
+                </div>
+                <div class="col-lg-5 col-sm-4" style="background-color: #F8F8F8;">
+                    <div class="form">
+                        <h2 class="text-center my-5">Income</h2>
+                        <p style="font-size: 1.5em;margin-left: 50px;">Income: <input id="income-input" type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <h2 class="text-center my-4">Expenses</h2>
+                        <p style="font-size: 1.5em; margin-left: 70px;">Food: <input id="food-input" type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <p style="font-size: 1.5em; margin-left: 75px;">Rent: <input id="rent-input" type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <p class="mb-4" style="font-size: 1.5em; margin-left: 45px;">Clothes: <input id="cloth-input"
+                                type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <button class="mb-5"
+                            style="color: white; background-color:#59A5FF;
+                        ; width: 200px; height: 50px; font-size: 1.5em; margin-left: 150px; border-radius: 10px;">Calculate</button>
+                        <p class="text-center" style="font-size: 1.5em;"> <strong>Total Expenses:</strong>
+                            <span>0</span>
+                        </p>
+                        <p class="text-center" style="font-size: 1.5em;"><strong>Balance:</strong> <span>0</span></p>
+                        <p style="font-size: 1.5em;margin-left: 70px;">Save: <input id="save-input" type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"> %
+                            <button style="color: white; background-color:#59A5FF;
+                            ; width: 100px; height: 50px; font-size: 1.1em; border-radius: 10px;">Save</button>
+                        </p>
+                        <p class=" text-center" style="font-size: 1.5em;"><strong>Saving Amount:</strong> <span>0</span>
+                        </p>
+                        <p class="text-center" style="font-size: 1.5em;"> <strong>Remaining Balance:</strong>
+                            <span>0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="JS2/money.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</html>
