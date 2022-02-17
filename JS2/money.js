@@ -1,5 +1,18 @@
+// Successfull
+function successfull() {
+    document.getElementById('yess').style.display = 'block';
+    document.getElementById('noo').style.display = 'none';
+}
+// Error
+function error() {
+    document.getElementById('yess').style.display = 'none';
+    document.getElementById('noo').style.display = 'block';
+}
+function notifyHide() {
+    document.getElementById('yess').style.display = 'none';
+    document.getElementById('noo').style.display = 'none';
+}
 // Get the balance after expenses
-
 function getBalance(product) {
     if (document.getElementById('income-input').value == "" || document.getElementById('food-input').value == "" || document.getElementById('rent-input').value == "" || document.getElementById('cloth-input').value == "") {
         console.log(alert('Please, Input Income & Expenses first'));
@@ -45,13 +58,13 @@ function getBalance(product) {
             var totalExpenses = foodCost + rentCost + clothCost;
             if (totalExpenses > income) {
                 console.log(alert('Your Expenses are more than your income.Please,ensure you are enter correct number'));
-                document.getElementById('yess').style.display = 'none';
-                document.getElementById('noo').style.display = 'block';
+                error();
             }
             else {
                 const balance = income - totalExpenses;
                 document.getElementById('total-expenses').innerText = totalExpenses;
                 document.getElementById('remaining-balance').innerText = balance;
+                successfull();
                 // document.getElementById('yess').style.display = 'block';
                 // document.getElementById('noo').style.display = 'none';
                 return balance;
@@ -79,8 +92,7 @@ function getRemainingBalance() {
             console.log(alert('Your saving percentage is Invalid.Please, enter a valid number.'));
             document.getElementById('saving-amount').innerText = 0;
             document.getElementById('remaining-balance2').innerText = getBalance('-input');
-            document.getElementById('yess').style.display = 'none';
-            document.getElementById('noo').style.display = 'block';
+            error();
         }
         else if ((isNaN(savingPercentage) != true || savingPercentage > 0) && savingInput.value != "") {
             const incomeAmount = document.getElementById('income-input');
@@ -89,14 +101,12 @@ function getRemainingBalance() {
                 console.log(alert('Your total expenses & savings can not more than your income'));
                 document.getElementById('saving-amount').innerText = 0;
                 document.getElementById('remaining-balance2').innerText = getBalance('-input');
-                document.getElementById('yess').style.display = 'none';
-                document.getElementById('noo').style.display = 'block';
+                error();
             }
             else {
                 document.getElementById('saving-amount').innerText = savingAmount;
                 document.getElementById('remaining-balance2').innerText = getBalance('-input') - savingAmount;
-                document.getElementById('yess').style.display = 'block';
-                document.getElementById('noo').style.display = 'none';
+                successfull();
             }
         }
 
@@ -104,6 +114,8 @@ function getRemainingBalance() {
 };
 // using addEventListener on calculate button
 document.getElementById('calculate-btn').addEventListener('click', function () {
+    document.getElementById('saving-amount').innerText = 0;
+    document.getElementById('remaining-balance2').innerText = 0;
     var afterExpenseBalance = getBalance('-input');
 });
 
@@ -113,18 +125,17 @@ document.getElementById('save-btn').addEventListener('click', function () {
 });
 // error case handling
 document.getElementById('income-input').addEventListener('click', function () {
-    document.getElementById('yess').style.display = 'none';
-    document.getElementById('noo').style.display = 'none';
+    notifyHide();
 });
 document.getElementById('food-input').addEventListener('click', function () {
-    document.getElementById('yess').style.display = 'none';
-    document.getElementById('noo').style.display = 'none';
+    notifyHide();
 });
 document.getElementById('rent-input').addEventListener('click', function () {
-    document.getElementById('yess').style.display = 'none';
-    document.getElementById('noo').style.display = 'none';
+    notifyHide();
 });
 document.getElementById('cloth-input').addEventListener('click', function () {
-    document.getElementById('yess').style.display = 'none';
-    document.getElementById('noo').style.display = 'none';
+    notifyHide();
+});
+document.getElementById('save-input').addEventListener('click', function () {
+    notifyHide();
 });
