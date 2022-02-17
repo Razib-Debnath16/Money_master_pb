@@ -46,6 +46,8 @@ function getBalance(product) {
             const balance = income - totalExpenses;
             document.getElementById('total-expenses').innerText = totalExpenses;
             document.getElementById('remaining-balance').innerText = balance;
+            // document.getElementById('yess').style.display = 'block';
+            // document.getElementById('noo').style.display = 'none';
             return balance;
         }
     }
@@ -66,7 +68,9 @@ function getRemainingBalance() {
             console.log(alert('please, enter your Saving percentage'));
         }
         else if ((isNaN(savingPercentage) == true || savingPercentage < 0) && savingInput.value != "") {
-            console.log(alert('Your saving percentage is Invalid.Please, enter a valid number.'))
+            console.log(alert('Your saving percentage is Invalid.Please, enter a valid number.'));
+            document.getElementById('saving-amount').innerText = 0;
+            document.getElementById('remaining-balance2').innerText = getBalance('-input');
         }
         else if ((isNaN(savingPercentage) != true || savingPercentage > 0) && savingInput.value != "") {
             const incomeAmount = document.getElementById('income-input');
@@ -79,10 +83,12 @@ function getRemainingBalance() {
             else {
                 document.getElementById('saving-amount').innerText = savingAmount;
                 document.getElementById('remaining-balance2').innerText = getBalance('-input') - savingAmount;
+                // document.getElementById('yess').style.display = 'block';
+                // document.getElementById('noo').style.display = 'none';
+
 
             }
         }
-
 
     }
 };
