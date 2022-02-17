@@ -10,34 +10,38 @@
     <!-- css style -->
     <link rel="stylesheet" href="CSS2/style.css">
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/e14277a0df.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/e14277a0df.js" crossorigin="anonymous"></script> -->
     <!--  -->
 </head>
 
 <body>
     <header>
-        <h1 class="heading text-center mb-3 p-5" style="font-size: 3em;">Money Savings <i
-                class="fa-solid fa-dollar-sign"></i>
+        <h1 class="heading text-center mb-3 p-5" style="font-size: 3em;"> <strong>Money Savings</strong>
+            <!-- <i
+                class="fa-solid fa-dollar-sign"></i> -->
         </h1>
     </header>
     <main>
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-lg-6 col-sm-4">
+                <div id="img" class="col-lg-6 col-sm-4">
                     <img src="images/image1.png" alt="" style="height: 800px;width: 700px;">
                 </div>
                 <div class="col-lg-5 col-sm-4" style="background-color: #F8F8F8;">
                     <div class="form">
-                        <h2 class="text-center my-5">Income</h2>
-                        <p style="font-size: 1.5em;margin-left: 50px;">Income: <input id="income-input" type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
-                        <h2 class="text-center my-4">Expenses</h2>
-                        <p style="font-size: 1.5em; margin-left: 70px;">Food: <input id="food-input" type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
-                        <p style="font-size: 1.5em; margin-left: 75px;">Rent: <input id="rent-input" type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
-                        <p class="mb-4" style="font-size: 1.5em; margin-left: 45px;">Clothes: <input id="cloth-input"
+                        <h2 class="text-center my-5"><strong>Income</strong></h2>
+                        <p id="income-sec" style="font-size: 1.5em;margin-left: 50px;">Income: <input id="income-input"
                                 type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <h2 class="text-center my-4"><strong>Expenses</strong></h2>
+                        <p id="food-sec" style="font-size: 1.5em; margin-left: 70px;">Food: <input id="food-input"
+                                type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <p id="rent-sec" style="font-size: 1.5em; margin-left: 75px;">Rent: <input id="rent-input"
+                                type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <p id="cloth-sec" class="mb-4" style="font-size: 1.5em; margin-left: 45px;">Clothes: <input
+                                id="cloth-input" type="text"
                                 style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
                         <button id="calculate-btn" class="mb-5"
                             style="color: white; background-color:#59A5FF;
@@ -48,7 +52,8 @@
                         </p>
                         <p class="text-center" style="font-size: 1.5em;"><strong>Balance:</strong> <strong><span
                                     id="remaining-balance">0</span></p></strong>
-                        <p style="font-size: 1.5em;margin-left: 70px;">Save: <input id="save-input" type="text"
+                        <p id="save-sec" style="font-size: 1.5em;margin-left: 70px;">Save: <input id="save-input"
+                                type="text"
                                 style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px; margin-right: 5px;">
                             %
                             <button id="save-btn"
@@ -67,6 +72,7 @@
         </div>
     </main>
 </body>
+<!-- connect with js -->
 <script src="JS2/money.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 

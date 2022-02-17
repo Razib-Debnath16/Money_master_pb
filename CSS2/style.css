@@ -11,3 +11,38 @@ font-family: 'Source Sans Pro', sans-serif;
 padding: 0;
 margin: 0;
 }
+@media only screen and (max-width:688px) {
+
+    #img img{
+        width: 350px !important; 
+        height: 400px !important;
+        padding-left: 15px;
+    }
+    .form {
+     display: block;
+     justify-content: center;
+     align-items: center;
+    }
+    #income-sec{
+        margin-left: 5px !important; 
+    }
+    #food-sec{
+        margin-left: 25px !important;
+    }
+    #rent-sec{
+        margin-left: 28px !important;
+    }
+    #cloth-sec{
+        margin-left: 0px !important;
+    }
+    #calculate-btn{
+        margin-left: 80px !important;
+    }
+    #save-sec{
+        margin-left: 10px !important;
+    }
+    #save-btn{
+        margin-top: 20px;
+        margin-left: 120px !important;
+    }
+}
