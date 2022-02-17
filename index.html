@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Saving</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- css style -->
     <link rel="stylesheet" href="CSS2/style.css">
     <!-- fontawesome -->
     <!-- <script src="https://kit.fontawesome.com/e14277a0df.js" crossorigin="anonymous"></script> -->
     <!--  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -24,46 +24,49 @@
     <main>
         <div class="container">
             <div class="row justify-content-between">
-                <div id="img-sec" class="col-lg-6 col-sm-12">
-                    <img src="images/image1.png" alt="" style="height: 800px;width: 700px;">
+                <div id="img-sec" class="img-fluid col-lg-4 col-sm-12">
+                    <img src="images/image1.png" alt="">
                     <!-- notify section -->
                     <div class="notify-section">
                         <p id="noo" class="notify">❌ Error Occurred</p>
                         <p id="yess" class="notify">✅ Successfully Calculated</p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-sm-12" style="background-color: #F8F8F8;">
+                <div class="col-lg-4 col-sm-12" style="background-color: #F8F8F8;">
                     <div class="form">
-                        <h2 class="text-center my-5"><strong>Income</strong></h2>
-                        <p id="income-sec" style="font-size: 1.5em;margin-left: 50px;">Income: <input id="income-input"
-                                type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
+                        <h2 class="text-center my-2"><strong>Income</strong></h2>
+                        <p id="income-sec" style="font-size: 1.5em;">Income: <input id="income-input" type="text"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 200px; height: 50px;">
+                        </p>
                         <h2 class="text-center my-4"><strong>Expenses</strong></h2>
-                        <p id="food-sec" style="font-size: 1.5em; margin-left: 70px;">Food: <input id="food-input"
+                        <p id="food-sec" style="font-size: 1.5em; margin-left: 25px;">Food: <input id="food-input"
                                 type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
-                        <p id="rent-sec" style="font-size: 1.5em; margin-left: 75px;">Rent: <input id="rent-input"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 200px; height: 50px;">
+                        </p>
+                        <p id="rent-sec" style="font-size: 1.5em; margin-left: 30px;">Rent: <input id="rent-input"
                                 type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
-                        <p id="cloth-sec" class="mb-4" style="font-size: 1.5em; margin-left: 45px;">Clothes: <input
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 200px; height: 50px;">
+                        </p>
+                        <p id="cloth-sec" class="mb-4" style="font-size: 1.5em; margin-left: 0px;">Clothes: <input
                                 id="cloth-input" type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px;"></p>
-                        <button id="calculate-btn" class="mb-5"
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 200px; height: 50px;">
+                        </p>
+                        <button id="calculate-btn" class="mb-3"
                             style="color: white; background-color:#59A5FF;
-                        ; width: 200px; height: 50px; font-size: 1.5em; margin-left: 150px; border-radius: 10px;">Calculate</button>
+                        ; width: 160px; height: 50px; font-size: 1.5em; margin-left: 100px; border-radius: 10px;">Calculate</button>
                         <p class="text-center" style="font-size: 1.5em;"> <strong>Total
                                 Expenses:</strong>
                             <strong><span id="total-expenses">0</span></strong>
                         </p>
                         <p class="text-center" style="font-size: 1.5em;"><strong>Balance:</strong> <strong><span
                                     id="remaining-balance">0</span></p></strong>
-                        <p id="save-sec" style="font-size: 1.5em;margin-left: 70px;">Save: <input id="save-input"
+                        <p id="save-sec" style="font-size: 1.5em;margin-left: 30px;">Save: <input id="save-input"
                                 type="text"
-                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 250px; margin-right: 5px;">
+                                style="background-color: #DCDCDC;border-radius: 5px; padding: 10px; width: 200px; height: 50px; margin-right: 5px; margin-bottom: 15px;">
                             %
                             <button id="save-btn"
                                 style="color: white; background-color:#59A5FF;
-                            ; width: 100px; height: 50px; font-size: 1.1em; border-radius: 10px; margin-left: 5px;">Save</button>
+                            ; width: 100px; height: 50px; font-size: 1.1em; border-radius: 10px; margin-left: 110px;">Save</button>
                         </p>
                         <p class=" text-center" style="font-size: 1.5em;"><strong>Saving Amount:</strong> <strong><span
                                     id="saving-amount">0</span></strong>
