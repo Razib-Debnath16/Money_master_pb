@@ -56,27 +56,33 @@ function getBalance(product) {
 // calculate saving amount and remaining balance
 
 function getRemainingBalance() {
-    var savingInput = document.getElementById('save-input');
-    const savingPercentage = parseFloat(savingInput.value);
-    if (savingInput.value == "") {
-        console.log(alert('please, enter your Saving percentage'));
+    if (document.getElementById('income-input').value == "" || document.getElementById('food-input').value == "" || document.getElementById('rent-input').value == "" || document.getElementById('cloth-input').value == "") {
+        console.log(alert('Please, Calculate Expenses & Balance first'));
     }
-    else if ((isNaN(savingPercentage) == true || savingPercentage < 0) && savingInput.value != "") {
-        console.log(alert('Your saving percentage is Invalid.Please, enter a valid number.'))
-    }
-    else if ((isNaN(savingPercentage) != true || savingPercentage > 0) && savingInput.value != "") {
-        const incomeAmount = document.getElementById('income-input');
-        var savingAmount = parseFloat((incomeAmount.value * savingPercentage) / 100);
-        if (getBalance('-input') - savingAmount < 0) {
-            console.log(alert('Your total expenses & savings can not more than your income'));
-            document.getElementById('saving-amount').innerText = 0;
-            document.getElementById('remaining-balance2').innerText = getBalance('-input');
+    else {
+        var savingInput = document.getElementById('save-input');
+        const savingPercentage = parseFloat(savingInput.value);
+        if (savingInput.value == "") {
+            console.log(alert('please, enter your Saving percentage'));
         }
-        else {
-            document.getElementById('saving-amount').innerText = savingAmount;
-            document.getElementById('remaining-balance2').innerText = getBalance('-input') - savingAmount;
+        else if ((isNaN(savingPercentage) == true || savingPercentage < 0) && savingInput.value != "") {
+            console.log(alert('Your saving percentage is Invalid.Please, enter a valid number.'))
+        }
+        else if ((isNaN(savingPercentage) != true || savingPercentage > 0) && savingInput.value != "") {
+            const incomeAmount = document.getElementById('income-input');
+            var savingAmount = parseFloat((incomeAmount.value * savingPercentage) / 100);
+            if (getBalance('-input') - savingAmount < 0) {
+                console.log(alert('Your total expenses & savings can not more than your income'));
+                document.getElementById('saving-amount').innerText = 0;
+                document.getElementById('remaining-balance2').innerText = getBalance('-input');
+            }
+            else {
+                document.getElementById('saving-amount').innerText = savingAmount;
+                document.getElementById('remaining-balance2').innerText = getBalance('-input') - savingAmount;
 
+            }
         }
+
 
     }
 };
