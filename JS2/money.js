@@ -14,7 +14,7 @@ function notifyHide() {
 }
 // Get the balance after expenses
 function getBalance(product) {
-    if (document.getElementById('income-input').value == "" || document.getElementById('food-input').value == "" || document.getElementById('rent-input').value == "" || document.getElementById('cloth-input').value == "") {
+    if (document.getElementById('income-input').value == "" && document.getElementById('food-input').value == "" && document.getElementById('rent-input').value == "" && document.getElementById('cloth-input').value == "") {
         console.log(alert('Please, Input Income & Expenses first'));
     }
     else {
